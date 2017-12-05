@@ -335,7 +335,7 @@ SUBROUTINE vars(ph, pco2, fco2, co2, hco3, co3, OmegaA, OmegaC, BetaD, rhoSW, p,
 !    ================================================================
      IF (dic(i) > 0. .AND. dic(i) < 1.0e+4) THEN
 !       Test to indicate if any of input variables are unreasonable
-        IF (verbosity == .true.) THEN
+        IF (verbosity .eqv. .true.) THEN
           IF (       sal(i) < 0.0_rx  &
                .OR.  alk(i) < 0.0_rx  &
                .OR.  dic(i) < 0.0_rx  &
